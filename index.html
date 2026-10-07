@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nakul Shettikeri — Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#14202B;
+    --ground-2:#182835;
+    --rule:#263B4D;
+    --text:#DCE5EB;
+    --muted:#8CA3B4;
+    --accent:#5FA88C;
+    --accent-dim:#3E7A64;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--text);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.55;
+  }
+  .wrap{max-width:56rem;margin:0 auto;padding:0 1.5rem}
+  a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--accent-dim)}
+  a:hover{border-bottom-color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  /* ---- masthead ---- */
+  header{padding:5.5rem 0 3rem}
+  h1{
+    font-size:clamp(2.1rem,6vw,3.1rem);
+    font-weight:600;
+    letter-spacing:-.02em;
+    margin:0 0 .6rem;
+  }
+  .standfirst{
+    max-width:44ch;
+    color:var(--muted);
+    margin:0 0 1.6rem;
+  }
+  .standfirst strong{color:var(--text);font-weight:500}
+  .contact{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.83rem;
+    color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;
+  }
+  .contact a{color:var(--muted)}
+  .contact a:hover{color:var(--text)}
+
+  /* ---- ledger ---- */
+  section{padding:2.6rem 0;border-top:1px solid var(--rule)}
+  h2{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.8rem;
+    font-weight:500;
+    color:var(--accent);
+    margin:0 0 1.8rem;
+    letter-spacing:.04em;
+  }
+  .entry{
+    display:grid;
+    grid-template-columns:1fr 9.5rem;
+    gap:.4rem 2rem;
+    padding:1.4rem 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .entry:last-child{border-bottom:0;padding-bottom:0}
+  .entry h3{
+    grid-column:1;
+    margin:0;
+    font-size:1.06rem;
+    font-weight:600;
+  }
+  .meta{
+    grid-column:2;grid-row:1;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.78rem;
+    color:var(--muted);
+    text-align:right;
+    font-variant-numeric:tabular-nums;
+    padding-top:.22rem;
+  }
+  .entry p{
+    grid-column:1 / -1;
+    margin:.5rem 0 0;
+    color:var(--muted);
+    max-width:64ch;
+  }
+  .entry p em{color:var(--text);font-style:normal}
+  .stack{
+    grid-column:1 / -1;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.76rem;
+    color:var(--accent-dim);
+    margin-top:.55rem;
+  }
+  .links{
+    grid-column:1 / -1;
+    margin-top:.8rem;
+    display:flex;flex-wrap:wrap;gap:.5rem .75rem;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.78rem;
+  }
+  .links a{
+    border:1px solid var(--rule);
+    border-radius:2px;
+    padding:.3rem .65rem;
+    color:var(--muted);
+  }
+  .links a:hover{border-color:var(--accent);color:var(--text)}
+
+  /* ---- skills ---- */
+  .skills{display:grid;gap:.9rem}
+  .skillrow{
+    display:grid;
+    grid-template-columns:8.5rem 1fr;
+    gap:1rem;
+    align-items:baseline;
+  }
+  .skillrow dt{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.78rem;
+    color:var(--muted);
+  }
+  .skillrow dd{margin:0;font-size:.95rem}
+
+  footer{
+    padding:2.6rem 0 5rem;
+    border-top:1px solid var(--rule);
+    color:var(--muted);
+    font-size:.9rem;
+  }
+
+  @media (max-width:600px){
+    body{font-size:16px}
+    header{padding:3.5rem 0 2rem}
+    .entry{grid-template-columns:1fr;gap:.15rem}
+    .meta{grid-column:1;grid-row:auto;text-align:left;padding-top:0}
+    .skillrow{grid-template-columns:1fr;gap:.15rem}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Nakul Shettikeri</h1>
+    <p class="standfirst">Full stack developer in Bengaluru. I build and ship client software end to end — <strong>FastAPI and PostgreSQL on the back, React and TypeScript on the front</strong>, deployed and maintained in production.</p>
+    <div class="contact">
+      <a href="mailto:nakulnshettikeri@gmail.com">nakulnshettikeri@gmail.com</a>
+      <a href="https://github.com/Enn3625">github.com/Enn3625</a>
+      <a href="https://www.linkedin.com/in/nakulshettikeri">linkedin.com/in/nakulshettikeri</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Built</h2>
+
+    <article class="entry">
+      <h3>Payments Ledger &amp; Webhook Engine</h3>
+      <div class="meta">2026</div>
+      <p>A payments backend built around the parts that are easy to get wrong: <em>double-entry ledger accounting</em> where debits and credits must balance, <em>idempotent payment intents</em> so a retried request can't charge twice, and <em>signed webhook handling</em> that rejects tampered or replayed events. React dashboard on top for transactions, balances and flagged activity.</p>
+      <div class="stack">FastAPI · PostgreSQL · SQLAlchemy · React · TypeScript · pytest</div>
+      <div class="links">
+        <a href="https://payments-ledger-engine.vercel.app">Dashboard</a>
+        <a href="https://payments-ledger-api.onrender.com/docs">API docs</a>
+        <a href="https://github.com/Enn3625/payments-ledger-engine">Source</a>
+      </div>
+    </article>
+
+    <article class="entry">
+      <h3>Premier League Predictions</h3>
+      <div class="meta">2026</div>
+      <p>A weekly prediction and scoring app for a private group — fixtures, locked-in picks before kickoff, and a running leaderboard.</p>
+      <div class="stack">React · TypeScript · Supabase</div>
+      <div class="links">
+        <a href="https://prem-predictions-app.vercel.app/signin">Live app</a>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Shipped for clients</h2>
+
+    <article class="entry">
+      <h3>Healthcare ERP</h3>
+      <div class="meta">Dec 2025 — now</div>
+      <p>Co-built a custom ERP replacing paper workflows for nurse scheduling, patient–staff mapping and visit tracking. Owned the full cycle from requirements through AWS deployment: FastAPI REST APIs, PostgreSQL schema, JWT auth and role-based access. The deployment became an ongoing paid contract.</p>
+      <div class="stack">FastAPI · PostgreSQL · React · JWT · AWS</div>
+    </article>
+
+    <article class="entry">
+      <h3>E-learning platform</h3>
+      <div class="meta">Apr — May 2026</div>
+      <p>Students browse, buy and attempt worksheets and mock tests. Razorpay integrated end to end — order creation through Supabase Edge Functions, purchase confirmed by webhook — with auth and role-based access gating paid content.</p>
+      <div class="stack">React 19 · TypeScript · Supabase · Razorpay · Vercel</div>
+    </article>
+
+    <article class="entry">
+      <h3>DocTrue Technologies</h3>
+      <div class="meta">Feb 2025 — Jan 2026</div>
+      <p>Software engineer, frontend-leaning. Owned feature development in React and TypeScript, led Next.js app work with Core Web Vitals optimisation, and maintained Node/Express services — fixing API bugs and writing backend logic to unblock the frontend. Started as an intern building Selenium automation that cut manual data entry by roughly 40%.</p>
+      <div class="stack">React · TypeScript · Next.js · Node.js · Express · Python</div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Toolkit</h2>
+    <dl class="skills">
+      <div class="skillrow"><dt>Languages</dt><dd>TypeScript, JavaScript, Python, SQL</dd></div>
+      <div class="skillrow"><dt>Frontend</dt><dd>React, Next.js, Vite, Tailwind, Redux, shadcn/ui</dd></div>
+      <div class="skillrow"><dt>Backend</dt><dd>FastAPI, Node.js, Express, Supabase Edge Functions, REST</dd></div>
+      <div class="skillrow"><dt>Data</dt><dd>PostgreSQL, MySQL, Supabase</dd></div>
+      <div class="skillrow"><dt>Payments</dt><dd>Razorpay — order creation, webhook verification</dd></div>
+      <div class="skillrow"><dt>Cloud</dt><dd>AWS (Cloud Practitioner), Vercel, Render, Git</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Also</h2>
+    <article class="entry">
+      <h3>High Speed PRNG for Homomorphic Encryption</h3>
+      <div class="meta">ICCAIE 2025</div>
+      <p>Published paper. A ChaCha20-based pseudorandom number generator tuned for homomorphic encryption, validated against the NIST randomness test suites.</p>
+    </article>
+    <article class="entry">
+      <h3>B.Tech, Electronics &amp; Communication</h3>
+      <div class="meta">PES University</div>
+      <p>Bengaluru, 2025.</p>
+    </article>
+  </section>
+
+  <footer>
+    Open to full stack and backend roles in Bengaluru or remote.
+    <a href="mailto:nakulnshettikeri@gmail.com">Get in touch</a>.
+  </footer>
+
+</div>
+</body>
+</html>
