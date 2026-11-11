@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nakul Shettikeri — Full Stack Developer</title>
+<title>Nakul Shettikeri — Embedded, IoT &amp; Backend Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -154,7 +154,7 @@
 
   <header>
     <h1>Nakul Shettikeri</h1>
-    <p class="standfirst">Full stack developer in Bengaluru. I build and ship client software end to end — <strong>FastAPI and PostgreSQL on the back, React and TypeScript on the front</strong>, deployed and maintained in production.</p>
+    <p class="standfirst">Electronics &amp; Communication engineer in Bengaluru, working where <strong>hardware meets software</strong>. I've shipped ESP32 IoT devices into a live clinic, published FPGA research at IEEE ISCAIE 2025, and built <strong>FastAPI and PostgreSQL systems</strong> that run in production. I won two paid client contracts and delivered both end to end.</p>
     <div class="contact">
       <a href="mailto:nakulnshettikeri@gmail.com">nakulnshettikeri@gmail.com</a>
       <a href="https://github.com/Enn3625">github.com/Enn3625</a>
@@ -163,13 +163,67 @@
   </header>
 
   <section>
+    <h2>Hardware &amp; research</h2>
+
+    <article class="entry">
+      <h3>ESP32 queue-management IoT buttons</h3>
+      <div class="meta">DocTrue · 2025</div>
+      <p>"Next patient" buttons for a hospital queue-management product. I wrote the firmware, with <em>Wi-Fi provisioning through a captive portal</em>, a per-device UUID that calls the queue REST API over HTTP, and buzzer/LED feedback with error handling. Added <em>over-the-air firmware updates</em>, evaluated ESP8266 and Raspberry Pi Pico W as cheaper alternatives, and soldered and assembled the units used at a client clinic.</p>
+      <div class="stack">ESP32 · Arduino IDE · WiFiManager · OTA · REST over HTTP</div>
+    </article>
+
+    <article class="entry">
+      <h3>High Speed PRNG for Homomorphic Encryption</h3>
+      <div class="meta">IEEE ISCAIE 2025</div>
+      <p>Published paper, second author. An FPGA pseudo-random number generator combining a <em>ChaCha6 core with a 32-bit LFSR</em>, written in Verilog in Xilinx Vivado. It reached 2.78 Gbps and passed all 15 NIST statistical tests. I wrote the LFSR and the ChaCha quarter-round logic, and ran the NIST test suite.</p>
+      <div class="stack">Verilog · Xilinx Vivado · FPGA · NIST SP 800-22</div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Shipped for clients</h2>
+
+    <article class="entry">
+      <h3>Lords LHHS Healthcare Pvt Ltd — ERP</h3>
+      <div class="meta">Jan 2026 — now</div>
+      <p>A custom ERP replacing the clinic's paper workflows for nurse scheduling, patient–staff mapping and visit tracking. Owned the full cycle from requirements through AWS deployment: FastAPI REST APIs, PostgreSQL schema, JWT auth and role-based access. It manages 150+ patient records and 250+ nurse profiles, and the deployment became an ongoing paid contract.</p>
+      <div class="stack">FastAPI · PostgreSQL · React · TypeScript · Docker · AWS (S3)</div>
+    </article>
+
+    <article class="entry">
+      <h3>Radiance Academy — e-learning platform</h3>
+      <div class="meta">Apr — May 2026</div>
+      <p>Students browse, buy and attempt nursing mock tests, about 40 paid enrollments. Razorpay integrated end to end: order creation through Supabase Edge Functions, <em>HMAC-SHA256 signature verification</em>, server-side pricing, and Postgres Row-Level Security so only verified payments can unlock content.</p>
+      <div class="stack">React · TypeScript · Supabase · Razorpay · Vercel</div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Employment</h2>
+
+    <article class="entry">
+      <h3>Software Engineer — DocTrue Technologies</h3>
+      <div class="meta">Sep 2025 — Jan 2026</div>
+      <p>Proposed and led a feature that lets clinic staff configure the hospital TV queue display (doctors, sessions, layouts) from their dashboard instead of a TV remote. Rolled out to all clients. Also built React and Next.js features and maintained Node/Express services.</p>
+      <div class="stack">React · TypeScript · Next.js · Node.js · Express</div>
+    </article>
+
+    <article class="entry">
+      <h3>Software Engineering Intern — DocTrue Technologies</h3>
+      <div class="meta">Feb — Aug 2025</div>
+      <p>Built the ESP32 queue buttons above, from firmware and soldering to backend integration. Wrote Python and Selenium automation that cut manual data entry by about 40%.</p>
+      <div class="stack">ESP32 · Python · Selenium</div>
+    </article>
+  </section>
+
+  <section>
     <h2>Built</h2>
 
     <article class="entry">
       <h3>Payments Ledger &amp; Webhook Engine</h3>
       <div class="meta">2026</div>
-      <p>A payments backend built around the parts that are easy to get wrong: <em>double-entry ledger accounting</em> where debits and credits must balance, <em>idempotent payment intents</em> so a retried request can't charge twice, and <em>signed webhook handling</em> that rejects tampered or replayed events. React dashboard on top for transactions, balances and flagged activity.</p>
-      <div class="stack">FastAPI · PostgreSQL · SQLAlchemy · React · TypeScript · pytest</div>
+      <p>A payments backend built around the parts that are easy to get wrong: <em>double-entry ledger accounting</em> enforced inside the database by a deferred constraint trigger, <em>idempotent payment intents</em> so a retried request can't charge twice, and <em>signed webhook handling</em> that rejects tampered or replayed events. 236 tests at 99% coverage against a real PostgreSQL instance, behind a 95% CI gate. React dashboard on top for transactions, balances and flagged activity.</p>
+      <div class="stack">FastAPI · PostgreSQL · SQLAlchemy · React · TypeScript · pytest · GitHub Actions</div>
       <div class="links">
         <a href="https://payments-ledger-engine.vercel.app">Dashboard</a>
         <a href="https://payments-ledger-api.onrender.com/docs">API docs</a>
@@ -180,7 +234,7 @@
     <article class="entry">
       <h3>Premier League Predictions</h3>
       <div class="meta">2026</div>
-      <p>A weekly prediction and scoring app for a private group — fixtures, locked-in picks before kickoff, and a running leaderboard.</p>
+      <p>A weekly prediction and scoring app for a private group: fixtures, picks locked before kickoff, and a running leaderboard.</p>
       <div class="stack">React · TypeScript · Supabase</div>
       <div class="links">
         <a href="https://prem-predictions-app.vercel.app/signin">Live app</a>
@@ -189,58 +243,28 @@
   </section>
 
   <section>
-    <h2>Shipped for clients</h2>
-
-    <article class="entry">
-      <h3>Healthcare ERP</h3>
-      <div class="meta">Dec 2025 — now</div>
-      <p>Co-built a custom ERP replacing paper workflows for nurse scheduling, patient–staff mapping and visit tracking. Owned the full cycle from requirements through AWS deployment: FastAPI REST APIs, PostgreSQL schema, JWT auth and role-based access. The deployment became an ongoing paid contract.</p>
-      <div class="stack">FastAPI · PostgreSQL · React · JWT · AWS</div>
-    </article>
-
-    <article class="entry">
-      <h3>E-learning platform</h3>
-      <div class="meta">Apr — May 2026</div>
-      <p>Students browse, buy and attempt worksheets and mock tests. Razorpay integrated end to end — order creation through Supabase Edge Functions, purchase confirmed by webhook — with auth and role-based access gating paid content.</p>
-      <div class="stack">React 19 · TypeScript · Supabase · Razorpay · Vercel</div>
-    </article>
-
-    <article class="entry">
-      <h3>DocTrue Technologies</h3>
-      <div class="meta">Feb 2025 — Jan 2026</div>
-      <p>Software engineer, frontend-leaning. Owned feature development in React and TypeScript, led Next.js app work with Core Web Vitals optimisation, and maintained Node/Express services — fixing API bugs and writing backend logic to unblock the frontend. Started as an intern building Selenium automation that cut manual data entry by roughly 40%.</p>
-      <div class="stack">React · TypeScript · Next.js · Node.js · Express · Python</div>
-    </article>
-  </section>
-
-  <section>
     <h2>Toolkit</h2>
     <dl class="skills">
-      <div class="skillrow"><dt>Languages</dt><dd>TypeScript, JavaScript, Python, SQL</dd></div>
-      <div class="skillrow"><dt>Frontend</dt><dd>React, Next.js, Vite, Tailwind, Redux, shadcn/ui</dd></div>
-      <div class="skillrow"><dt>Backend</dt><dd>FastAPI, Node.js, Express, Supabase Edge Functions, REST</dd></div>
-      <div class="skillrow"><dt>Data</dt><dd>PostgreSQL, MySQL, Supabase</dd></div>
-      <div class="skillrow"><dt>Payments</dt><dd>Razorpay — order creation, webhook verification</dd></div>
-      <div class="skillrow"><dt>Cloud</dt><dd>AWS (Cloud Practitioner), Vercel, Render, Git</dd></div>
+      <div class="skillrow"><dt>Embedded &amp; IoT</dt><dd>C, ESP32 (Arduino IDE), Wi-Fi provisioning, OTA updates, REST from devices, soldering and assembly</dd></div>
+      <div class="skillrow"><dt>Digital design</dt><dd>Verilog, FPGA (Xilinx Vivado), computer architecture (RISC-V), NIST statistical testing</dd></div>
+      <div class="skillrow"><dt>Languages</dt><dd>Python, C, SQL, TypeScript, JavaScript</dd></div>
+      <div class="skillrow"><dt>Backend &amp; data</dt><dd>FastAPI, Node.js, Express, Supabase Edge Functions, PostgreSQL, MySQL</dd></div>
+      <div class="skillrow"><dt>DevOps &amp; cloud</dt><dd>Docker, GitHub Actions CI, pytest, Git, AWS (S3, Elastic Beanstalk; Cloud Practitioner), Vercel, Render</dd></div>
+      <div class="skillrow"><dt>Frontend</dt><dd>React, Next.js, Vite, Tailwind</dd></div>
     </dl>
   </section>
 
   <section>
-    <h2>Also</h2>
+    <h2>Education</h2>
     <article class="entry">
-      <h3>High Speed PRNG for Homomorphic Encryption</h3>
-      <div class="meta">ICCAIE 2025</div>
-      <p>Published paper. A ChaCha20-based pseudorandom number generator tuned for homomorphic encryption, validated against the NIST randomness test suites.</p>
-    </article>
-    <article class="entry">
-      <h3>B.Tech, Electronics &amp; Communication</h3>
+      <h3>B.Tech, Electronics &amp; Communication Engineering</h3>
       <div class="meta">PES University</div>
-      <p>Bengaluru, 2025.</p>
+      <p>Bengaluru, 2025. CGPA 7.13.</p>
     </article>
   </section>
 
   <footer>
-    Open to full stack and backend roles in Bengaluru or remote.
+    Open to embedded, IoT, platform and backend roles in Bengaluru or remote.
     <a href="mailto:nakulnshettikeri@gmail.com">Get in touch</a>.
   </footer>
 
